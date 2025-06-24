@@ -37,7 +37,7 @@ Her acenta için şu bilgileri toplar:
 ### 2. Projeyi İndirin
 
 ```bash
-git clone https://github.com/username/tursab-bot.git
+git clone https://github.com/veliardabalci/tursab-bot.git
 cd tursab-bot
 ```
 
@@ -46,34 +46,6 @@ cd tursab-bot
 ```bash
 pip install -r requirements.txt
 ```
-
-### 4. PostgreSQL Kurulumu
-
-PostgreSQL'in sisteminizde kurulu olduğundan emin olun:
-
-**macOS:**
-```bash
-brew install postgresql
-brew services start postgresql
-```
-
-**Ubuntu/Debian:**
-```bash
-sudo apt update
-sudo apt install postgresql postgresql-contrib
-sudo systemctl start postgresql
-```
-
-### 5. Database Kurulumu
-
-```bash
-python3 setup_database.py
-```
-
-Bu script:
-- `tursab` database'ini oluşturur
-- Gerekli tabloları oluşturur
-- Bağlantıyı test eder
 
 ## 📖 Kullanım
 
@@ -170,13 +142,6 @@ sudo apt install google-chrome-stable
 Database bağlantı hatası: connection refused
 ```
 **Çözüm:** PostgreSQL'in çalıştığından emin olun:
-```bash
-# macOS
-brew services start postgresql
-
-# Ubuntu
-sudo systemctl start postgresql
-```
 
 ### Element Bulunamadı Hatası
 ```bash
@@ -215,15 +180,6 @@ ACENTA BİLGİLERİ
 📊 Başarılı: 1, Başarısız: 0
 ----------------------------------------
 ```
-
-## 🔧 Geliştirme
-
-### Yeni Özellik Ekleme
-
-1. `TursabBot` sınıfına yeni metod ekleyin
-2. Database için yeni sütun gerekiyorsa `Agency` modelini güncelleyin
-3. `_parse_agency_container` metodunu yeni veri için güncelleyin
-
 ### Test Etme
 
 ```python
@@ -234,13 +190,10 @@ agencies = bot.search_agency("1001")
 print(agencies)
 ```
 
-## 📝 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
 
 ## ⚠️ Yasal Uyarı
 
-Bu bot eğitim amaçlıdır. TÜRSAB sitesinin kullanım koşullarına uygun olarak kullanın. Aşırı istekte bulunmaktan kaçının.
+Bu bot eğitim amaçlıdır. TÜRSAB sitesinin kullanım koşullarına uygun olarak kullanın.
 
 ## 🤝 Katkıda Bulunma
 
@@ -253,7 +206,3 @@ Bu bot eğitim amaçlıdır. TÜRSAB sitesinin kullanım koşullarına uygun ola
 ## 📞 İletişim
 
 Sorularınız için issue açabilirsiniz.
-
----
-
-**Made with ❤️ by Bot Developer** 
